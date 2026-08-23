@@ -1,4 +1,4 @@
-package org.Task_1;
+package hometask.task_1;
 
 public final class Department {
 
@@ -6,6 +6,7 @@ public final class Department {
     private final Chief chief;
 
     public Department(String name, Chief chief) {
+        if (chief == null) throw new IllegalArgumentException("Null object");
         this.name = name;
         this.chief = chief.copy();
     }
