@@ -1,6 +1,5 @@
 package hometask.task_2;
 
-import org.jetbrains.annotations.NotNull;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -42,7 +41,7 @@ public class Student {
         return Collections.unmodifiableList(books);
     }
 
-    public static List<Student> createStudents(@NotNull String filePath) {
+    public static List<Student> createStudents(String filePath) {
         try (var lines = Files.lines(Path.of(filePath))) {
             lines.filter(line -> !line.trim().isEmpty())
                     .forEach(line -> {
